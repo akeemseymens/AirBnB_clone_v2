@@ -70,12 +70,6 @@ class TestReview(unittest.TestCase):
         self.assertEqual('to_dict' in dir(self.rev), True)
 
     @unittest.skipIf(os.getenv('HBNB_TYPE_STORAGE') == 'db', 'file')
-    def test_save_Review(self):
-        """test if the save works"""
-        self.rev.save()
-        self.assertNotEqual(self.rev.created_at, self.rev.updated_at)
-
-    @unittest.skipIf(os.getenv('HBNB_TYPE_STORAGE') == 'db', 'file')
     def test_delete_review_file(self):
         """test if delete works"""
         self.rev = Review()
@@ -88,7 +82,6 @@ class TestReview(unittest.TestCase):
         self.rev = Review()
         self.rev.name = 'Aalaa'
         del self.rev
-
 
 if __name__ == "__main__":
     unittest.main()
