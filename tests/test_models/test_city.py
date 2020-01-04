@@ -80,6 +80,5 @@ class TestCity(unittest.TestCase):
         self.city.name = 'Berkeley'
         del self.city
 
-
 if __name__ == "__main__":
     unittest.main()
