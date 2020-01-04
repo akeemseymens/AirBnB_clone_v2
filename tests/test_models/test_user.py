@@ -87,7 +87,6 @@ class TestUser(unittest.TestCase):
         self.user.first_name = 'Aalaa'
         self.user.last_name = 'Satti'
         del self.user
-
-
+        
 if __name__ == "__main__":
     unittest.main()
